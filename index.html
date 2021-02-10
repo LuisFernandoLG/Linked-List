@@ -1,171 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista simple</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lista simple</title>
 
-    <!-- Fonts -->
-    <link rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+        <!-- Fonts -->
+        <link
+            rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css"
+        />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style_main.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style_main.css" />
 
-    <!-- ICONS -->
-    <script src="https://kit.fontawesome.com/e2bb560564.js" crossorigin="anonymous"></script>
+        <!-- ICONS -->
+        <script
+            src="https://kit.fontawesome.com/e2bb560564.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header bg-primary-color">
+                <div class="header-open">
+                    <i class="fas fa-bars header-open__btn font-secundary-color" id="open-settings"></i>
+                </div>
 
-    
+                <h1 class="header__tittle weight-800 font-primary-color">
+                    Linked <span class="header__tittle-bold font-secundary-color">Simple</span> List
+                </h1>
 
-</head>
-<body>
+                <div class="themes-container">
+                    <select
+                        class="themes-comboBox weight-800 bg-secundary-color font-primary-color"
+                        name="themes-comboBox"
+                        id="themes-comboBox"
+                    >
+                        <option
+                            value="Dark Theme"
+                            class="themes-comboBox__option weight-400"
+                        >
+                            Dark Theme
+                        </option>
+                        <option
+                            value="Scartlett Theme"
+                            class="themes-comboBox__option weight-400"
+                        >
+                            Scarlett Theme
+                        </option>
+                    </select>
+                </div>
+            </header>
 
-    <div class="container">
+            <aside class="settings bg-secundary-color shadow">
+                <div class="settings-close">
+                    <i
+                        class="fas fa-times-circle settings-close__btn font-secundary-color"
+                        id="close-settings"
+                    ></i>
+                </div>
 
-        <header class="header">
+                <h2 class="settings__tittle weight-700 font-secundary-color">Settings</h2>
 
-            <div class="header-open">
-                <i class="fas fa-bars header-open__btn" id="open-settings"></i>
-            </div>
+                <div class="settings-option">
+                    <label for="settings-option1" class="settings-option__label font-primary-color"
+                        >Add animation speed</label
+                    >
+                    <input
+                        name="settings-option1"
+                        placeholder="milliseconds"
+                        id="input-add-speed"
+                        class="settings-option__input"
+                        type="number"
+                    />
+                </div>
 
-            <h1 class="header__tittle weight-800">Linked <span class="header__tittle-bold">Simple</span> List</h1>
+                <div class="settings-option">
+                    <label for="settings-option2" class="settings-option__label font-primary-color"
+                        >Remove animation speed</label
+                    >
+                    <input
+                        name="settings-option2"
+                        placeholder="milliseconds"
+                        id="input-remove-speed"
+                        class="settings-option__input"
+                        type="number"
+                    />
+                </div>
 
-            <div class="themes-container">
-                <select class="themes-comboBox weight-500" name="themes-comboBox" id="themes-comboBox">
-                    <option value="Dark Theme" class="themes-comboBox__option weight-400">Dark Theme</option>
-                    <option value="Scartlett Theme" class="themes-comboBox__option weight-400">Scarlett Theme</option>
-                    
-                </select>
-            </div>
-        </header>
+                <div class="settings-option">
+                    <label for="settings-option4" class="settings-option__label font-primary-color"
+                        >Iteration animation speed</label
+                    >
+                    <input
+                        name="settings-option4"
+                        placeholder="milliseconds"
+                        id="input-iteration-speed"
+                        class="settings-option__input"
+                        type="number"
+                    />
+                </div>
 
-        <aside class="settings">
-            <div class="settings-close">
-                <i class="fas fa-times-circle settings-close__btn" id="close-settings"></i>
+                <div id="settings-message" class="settings-message"></div>
 
-            </div>
+                <div id="settings-saved-button"  class="settings__btn weight-500 bg-primary-color font-primary-color">
+                    Saved
+                </div>
+            </aside>
 
-            <h2 class="settings__tittle weight-700">Settings</h2>
-
-            <div class="settings-option">
-                <label for="settings-option1" class="settings-option__label">Add animation speed</label>
-                <input name="settings-option1" placeholder="milliseconds" id="input-add-speed" class="settings-option__input" type="number">
-            </div>
-
-            <div class="settings-option">
-                <label for="settings-option2" class="settings-option__label">Remove animation speed</label>
-                <input name="settings-option2" placeholder="milliseconds" id="input-remove-speed" class="settings-option__input" type="number">
-            </div>
-
-            <div class="settings-option">
-                <label for="settings-option4" class="settings-option__label">Iteration animation speed</label>
-                <input name="settings-option4" placeholder="milliseconds" id="input-iteration-speed" class="settings-option__input" type="number">
-            </div>
-
-            <div id="settings-message" class="settings-message">
-
-            </div>
-
-            <div id="settings-saved-button" class="settings__btn weight-500">
-                Saved
-            </div>
-    
-
-        </aside>
-
-        <main class="main">
-                
+            <!-- Nodes ---------------------------------------------------- -->
+            <main class="main">
                 <div id="list" class="list">
-                    <div class="node">
+                    <div class="node node-border">
                         <p class="node__value weight-500">1</p>
                     </div>
-                    <div class="arrow">
-                        <i class="fas fa-long-arrow-alt-right arrow__i"></i>
-                        
+                    <div class="arrow ">
+                        <i class="fas fa-long-arrow-alt-right arrow__i "></i>
                     </div>
-                </div> 
-                
+                </div>
+
                 <div class="nodes__null"></div>
-            
 
-            <div class="message" id="message">
-                
-            </div>
+                <div class="message" id="message"></div>
 
-            <div class="options">
-                <div class="option">
-                    <div class="option-header">
-                        <i class="fas fa-minus-circle option-header__icon"></i>            
-                        
-                        <select name="comboBox" id="delete-comboBox" class="comboBox weight-500">
-                            <option value="Front" class="comboBox__option weight-400">Front</option>
-                            <option value="Back" class="comboBox__option weight-400">Back</option>
-                            
-                        </select>
-                    </div>
-                    <div class="option-body">
-                        <button id="delete-button" class="option-body__button weight-500">Remove</button>
-                    </div>
-                </div>
-                
-                <div class="special-options">
-                    <button class="special-options__btn weight-500" id="iterationButton">iteration!</button>
-                    <button class="special-options__btn weight-500" id="deleteAllButton">Delete all</button>
-                    
-                </div>
-                
-                <div class="option">
-                    <div class="option-header">
-                        <i class="fas fa-plus-circle option-header__icon"></i>
-                            <select name="comboBox" id="add-comboBox" class="comboBox weight-500">
-                                <option value="Front" class="comboBox__option">Front</option>
-                                <option value="Back" class="comboBox__option">Back</option>
-                                
+                <div class="options">
+                    <div class="option shadow">
+                        <div class="option-header bg-primary-color font-primary-color">
+                            <i class="fas fa-minus-circle option-header__icon"></i>
+
+                            <select
+                                name="comboBox"
+                                id="delete-comboBox"
+                                class="comboBox weight-500"
+                            >
+                                <option value="Front" class="comboBox__option weight-400">
+                                    Front
+                                </option>
+                                <option value="Back" class="comboBox__option weight-400">
+                                    Back
+                                </option>
                             </select>
+                        </div>
+                        <div class="option-body">
+                            <button
+                                id="delete-button"
+                                class="option-body__button weight-500 bg-primary-color font-primary-color"
+                            >
+                                Remove
+                            </button>
+                        </div>
                     </div>
-                    <div class="option-body">
-                        <input placeholder="Number" id="add-input" type="number" class="option-body__input">
-                        
-                        <button id="add-button" class="option-body__button weight-500">Add</button>
+
+                    <div class="special-options">
+                        <button
+                            class="special-options__btn weight-500 bg-primary-color font-primary-color"
+                            id="iterationButton"
+                        >
+                            iteration!
+                        </button>
+                        <button
+                            class="special-options__btn weight-500 bg-primary-color font-primary-color"
+                            id="deleteAllButton"
+                        >
+                            Delete all
+                        </button>
+                    </div>
+
+                    <div class="option shadow">
+                        <div class="option-header bg-primary-color font-primary-color">
+                            <i class="fas fa-plus-circle option-header__icon"></i>
+                            <select
+                                name="comboBox"
+                                id="add-comboBox"
+                                class="comboBox weight-500"
+                            >
+                                <option value="Front" class="comboBox__option">
+                                    Front
+                                </option>
+                                <option value="Back" class="comboBox__option">
+                                    Back
+                                </option>
+                            </select>
+                        </div>
+                        <div class="option-body">
+                            <input
+                                placeholder="Number"
+                                id="add-input"
+                                type="number"
+                                class="option-body__input underline bg-primary-color font-primary-color"
+                            />
+
+                            <button
+                                id="add-button"
+                                class="option-body__button weight-500 bg-primary-color font-primary-color"
+                            >
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="option option-set shadow">
+                        <div class="option-header bg-primary-color font-primary-color">
+                            <i
+                                class="fas fa-arrow-alt-circle-right option-header__icon"
+                            ></i>
+                            <h1 class="option-header__tittle">Set</h1>
+                        </div>
+
+                        <div class="option-body">
+                            <input
+                                placeholder="Index"
+                                id="set-input-index"
+                                type="number"
+                                class="option-body__input underline bg-primary-color font-primary-color"
+                            />
+
+                            <input
+                                placeholder="Number"
+                                id="set-input"
+                                type="number"
+                                class="option-body__input underline bg-primary-color font-primary-color"
+                            />
+
+                            <button
+                                id="set-button"
+                                class="option-body__button weight-500 bg-primary-color font-primary-color"
+                            >
+                                Set
+                            </button>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="option option-set">
-                    <div class="option-header">
-                        <i class="fas fa-arrow-alt-circle-right option-header__icon"></i>
-                        <h1 class="option-header__tittle">
-                            Set
-                        </h1>
-                    </div>
+            </main>
 
-                    <div class="option-body">
+            <footer class="footer bg-primary-color">
+                <p class="credits weight-400 font-primary-color">
+                    Created by:
+                    <a class="credits__name weight-800 bg-secundary-color font-secundary-color"
+                        >Luis López <span class="weight-800">2.0</span>
+                    </a>
+                </p>
+            </footer>
+        </div>
 
-                        <input placeholder="Index" id="set-input-index" type="number" class="option-body__input">
-
-                        <input placeholder="Number" id="set-input" type="number" class="option-body__input">
-                        
-                        <button  id="set-button" class="option-body__button weight-500 ">Set</button disabled="true">
-                    </div>
-                </div>
-                
+        <script src="js/main.js" type="module"></script>
 
 
-
-            </div>
-
-        </main>
-
-
-
-        <footer class="footer">
-            <p class="credits weight-400">Created by: <a class="credits__name weight-500">Luis López  <span class="weight-700">2.0</span> </a>
-            </p>
-        </footer>
-    </div>
-
-    <script type="module" src="/js/main.js"></script>
-    <!-- <script src="../js/testes.js"></script> -->
-    
-    
-</body>
+    </body>
 </html>

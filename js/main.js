@@ -1,4 +1,4 @@
-import { openSettings, closeSettings, saveSettings } from "./aside/settingsAside.js";
+import { openSettings, closeSettings, saveSettings, loadConfiguration } from "./aside/settingsAside.js";
 import {
     insertNode,
     deleteNode,
@@ -49,7 +49,9 @@ cleanListBtn.addEventListener("click", cleanList);
 
 iterationBtn.addEventListener("click", iterationList);
 
-ThemeComboBox.addEventListener("change", changeThemeComboBox);
+ThemeComboBox.addEventListener("change", function(){
+    changeThemeComboBox(this.value);
+});
 
 openSettingsBtn.addEventListener("click", () => {
     openSettings(settingsBar);
@@ -64,3 +66,8 @@ setBtn.addEventListener("click", () => {
 });
 
 settingsSavedButton.addEventListener("click", saveSettings);
+
+addEventListener("DOMContentLoaded", ()=>{
+    loadConfiguration();
+})
+

@@ -19,9 +19,6 @@ import {
 
 let list = document.getElementById("list");
 
-
-
-
 //list
 
 function createNode(valueToAdd) {
@@ -31,7 +28,7 @@ function createNode(valueToAdd) {
     let value = document.createTextNode(valueToAdd);
     let node = document.createElement("DIV");
 
-    node.classList.add("node");
+    node.classList.add("node", "node-border");
     content.classList.add("node__value", "weight-500");
 
     content.appendChild(value);

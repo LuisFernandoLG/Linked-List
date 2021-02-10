@@ -1,15 +1,5 @@
-const addInputSpeed = document.getElementById("input-add-speed");
-const removeInputSpeed = document.getElementById("input-remove-speed");
-const iterationInputSpeed = document.getElementById("input-iteration-speed");
+import {addAnimationSpeed, removeAnimationSpeed, iterationAnimationSpeed} from "./aside/settingsAside.js";
 
-// Animation speed
-let addAnimationSpeed = 1000;
-let removeAnimationSpeed = 500;
-let iterationAnimationSpeed = 900;
-
-addInputSpeed.value = addAnimationSpeed;
-removeInputSpeed.value = removeAnimationSpeed;
-iterationInputSpeed.value = iterationAnimationSpeed;
 
 function startNodeAnimation(node) {
     node.style.animation = `addNodeAnimation ${addAnimationSpeed / 1000}s alternate`;
@@ -20,9 +10,6 @@ function startArrowAnimation(arrow) {
         addAnimationSpeed / 1000
     }s ease alternate`;
 }
-
-
-
 
 function changeNodeValueAnimation(value) {
     value.style.animation = "startChangeNodeValue .7s ease alternate";
@@ -88,6 +75,11 @@ function startIterationArrowAnimation(arrow) {
 }
 
 export {
-    startNodeAnimation, startArrowAnimation, changeNodeValueAnimation, startDeleteNodeAnimation, startDeleteArrowAnimation, startiterationNodeAnimation, startIterationArrowAnimation,
-    addAnimationSpeed, removeAnimationSpeed, iterationAnimationSpeed,
-}
+    startNodeAnimation,
+    startArrowAnimation,
+    changeNodeValueAnimation,
+    startDeleteNodeAnimation,
+    startDeleteArrowAnimation,
+    startiterationNodeAnimation,
+    startIterationArrowAnimation
+};
