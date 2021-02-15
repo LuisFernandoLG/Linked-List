@@ -190,6 +190,13 @@ const loadSpeedSettings = () => {
 };
 
 const loadTheme = () => {
-    themeComboBox.value = localStorage.getItem("theme");
-    themeChanger.changeTheme(localStorage.getItem("theme"));
+    if ( localStorage.getItem("theme") ){
+        themeComboBox.value = localStorage.getItem("theme");
+        themeChanger.changeTheme(localStorage.getItem("theme"));
+    }else{
+        localStorage.setItem("theme", "Dark theme")
+        themeComboBox.value = localStorage.getItem("theme");
+        themeChanger.changeTheme();
+    }
+
 };
