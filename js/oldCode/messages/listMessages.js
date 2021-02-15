@@ -1,4 +1,4 @@
-import {getErrorMessage, getSuccessMessage} from "../messages/messages.js";
+import {getErrorMessage, getSuccessMessage} from "./messages.js";
 
 let messageContainer = document.getElementById("message");
 

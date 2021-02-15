@@ -1,9 +1,9 @@
-import { cleanMessage, showErrorMessage, showSuccessMessage } from "./asideMessages.js";
+import { cleanMessage, showErrorMessage, showSuccessMessage } from "../messages/asideMessages.js";
 import { isOnlyPositiveNumbers } from "../utils/validations.js";
-import { changeThemeComboBox } from "../themes.js";
+import { changeThemeComboBox } from "../theme/themes.js";
 import {
     startCloseSettingsAnimation,
-} from "./asideAnimations.js";
+} from "../animations/asideAnimations.js";
 
 // Animation speed
 let addAnimationSpeed = 1000;
@@ -18,14 +18,11 @@ let header = document.querySelector(".header");
 let main = document.querySelector(".main");
 let footer = document.querySelector(".footer");
 
-const loadConfiguration = () => {
-    addInputSpeed.value = addAnimationSpeed;
-    removeInputSpeed.value = removeAnimationSpeed;
-    iterationInputSpeed.value = iterationAnimationSpeed;
-
-    changeThemeComboBox( localStorage.getItem("theme") );
-
-};
+const changeSpeedAnimations = (addSpeed, removeSpeed, iterationSpeed)=>{
+    addInputSpeed.value = addSpeed;
+    removeInputSpeed.value = removeSpeed;
+    iterationInputSpeed.value = iterationSpeed;
+}
 
 function openSettings(settingsBar) {
     settingsBar.style.display = "flex";

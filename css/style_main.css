@@ -10,6 +10,14 @@
     --border-radius-options: 16px;
     --error-color: #d0312d;
 
+    /* 
+    #Color
+    #
+    #
+    #
+    
+    */
+
     --width-arrow: 130px;
     --height-arrow: 130px;
 
@@ -96,6 +104,7 @@ body {
     padding: 8px;
     border-radius: var(--border-radius-options);
     background: var(--secundary-color);
+    color: var(--primary-color);
     font-size: 0.9375rem;
     cursor: pointer;
 }
@@ -163,9 +172,6 @@ body {
 
 .arrow {
     padding: 5px;
-
-    animation: shakeArrow 1s alternate ease-out;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +212,7 @@ body {
 
 .option-header {
     width: 100%;
-    color: var(--primary-color);
+    color: var(--secundary-color);
     background: var(--primary-color);
 
     padding: 10px;

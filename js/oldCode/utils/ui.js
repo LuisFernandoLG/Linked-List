@@ -42,6 +42,4 @@ export function enableAllButtons(){
     deleteButton.removeAttribute("disabled", "");
     deleteButton.classList.remove("disable-btn");
     
-    
-    
   }

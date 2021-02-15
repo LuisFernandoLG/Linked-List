@@ -5,7 +5,7 @@ import {
     cleanMessage,
     showErrorMessage,
     showSuccessMessage,
-} from "./listMessages.js";
+} from "../messages/listMessages.js";
 
 import {
     startNodeAnimation,
@@ -15,7 +15,7 @@ import {
     startDeleteArrowAnimation,
     startiterationNodeAnimation,
     startIterationArrowAnimation,
-} from "../animations.js";
+} from "../animations/listAnimations.js";
 
 let list = document.getElementById("list");
 

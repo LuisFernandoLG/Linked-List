@@ -1,0 +1,10 @@
+class UI{
+    dissableButtons(){
+
+    }
+
+    enableButtons(){
+        
+    }
+}
+

@@ -1,4 +1,4 @@
-import {addAnimationSpeed, removeAnimationSpeed, iterationAnimationSpeed} from "./aside/settingsAside.js";
+import {addAnimationSpeed, removeAnimationSpeed, iterationAnimationSpeed} from "../aside/aside.js";
 
 
 function startNodeAnimation(node) {
