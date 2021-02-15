@@ -23,6 +23,8 @@ const cleanListBtn = document.getElementById("deleteAllButton");
 const iterationBtn = document.getElementById("iterationButton");
 const setBtn = document.getElementById("set-button");
 
+const creditsBtn = document.querySelector(".credits");
+
 const settingsSavedBtn = document.getElementById("settings-saved-button");
 const openSettingsBtn = document.getElementById("open-settings");
 const closeSettingsBtn = document.getElementById("close-settings");
@@ -128,6 +130,10 @@ settingsSavedBtn.addEventListener("click", () => {
             settingMessage.showSuccessMessage("Saved!");
         }
     });
+});
+
+creditsBtn.addEventListener("click", ()=>{
+    window.open("https://github.com/LuisFernandoLG/Linked-List");
 });
 
 const validateInputSettings = async (inputs) => {

@@ -352,6 +352,8 @@ body {
     color: var(--secundary-color);
     padding: 15px;
     font-size: 1.25rem;
+
+    cursor: pointer;
 }
 
 .credits__name {
